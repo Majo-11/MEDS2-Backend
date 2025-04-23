@@ -34,8 +34,6 @@ def display_patient(patient):
         print("Paciente encontrado:")
         print(f"  ID: {patient.get('_id')}")
         print(f"  Nombre: {patient.get('name', [{}])[0].get('given', [''])[0]} {patient.get('name', [{}])[0].get('family', '')}")
-        print(f"  Género: {patient.get('gender', 'Desconocido')}")
-        print(f"  Fecha de nacimiento: {patient.get('birthDate', 'Desconocida')}")
         print("  Identificadores:")
         for identifier in patient.get("identifier", []):
             print(f"    Type: {identifier.get('type')}, Valor: {identifier.get('value')}")
