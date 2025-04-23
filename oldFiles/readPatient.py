@@ -31,6 +31,8 @@ def display_patients(patient_list):
             print("Paciente:")
             print(f"  ID: {patient.get('_id')}")
             print(f"  Nombre: {patient.get('name', [{}])[0].get('given', [''])[0]} {patient.get('name', [{}])[0].get('family', '')}")
+            print(f"  Género: {patient.get('gender', 'Desconocido')}")
+            print(f"  Fecha de nacimiento: {patient.get('birthDate', 'Desconocida')}")
             print("-" * 30)
     else:
         print("No se encontraron pacientes en la base de datos.")
